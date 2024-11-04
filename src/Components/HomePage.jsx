@@ -8,11 +8,18 @@ import Ethjos from "./Ethjos"
 const HomePage = () => {
   return (
     <>
-    <div className="flex justify-center mt-10  items-center ">
-    <div>
-      <img src={hero} alt="Hero Image" />
-    </div>
-    </div>
+    <div className="relative flex justify-center mt-10 items-center">
+  
+  <div className="absolute left-0 w-40 h-full bg-[#8282FF] opacity-30 blur-2xl"></div>
+  
+  
+  <div className="absolute right-0 w-40 h-full bg-[#8282FF] opacity-30 blur-2xl"></div>
+
+ 
+  <div>
+    <img src={hero} alt="Hero Image" />
+  </div>
+</div>
     <CallActions/>
     <Ethjos/>
     <Connections/>

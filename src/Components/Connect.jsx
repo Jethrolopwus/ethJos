@@ -1,22 +1,4 @@
 
-
-// const Connect = () => {
-//   return (
-//     <div className="flex w-full justify-center">
-//         <div className="">
-//             <h1 className="flex flex-col items-center  text-4xl font-extrabold ">Connect with builders 
-//               <span className="">
-//             Today!
-//               </span></h1>
-//             <button className="bg-[#1C1CFF] p-1 ml-20 mt-4  text-slate-400 ">Join The Community Now!</button>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Connect
-
-
 const Connect = () => {
   return (
     <div className="flex w-full justify-center p-4">

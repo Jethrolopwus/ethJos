@@ -1,33 +1,3 @@
-// import arrow1 from "../assets/Arrows (1).png"
-// import arrow2 from "../assets/Arrows.png"
-// const CallActions = () => {
-//   return (
-//     <>
-//     <div className="flex justify-center items-center ">
-//       <div className="flex gap-8">
-//         <button className=" bg-[#1C1CFF] flex justify-center items-center text-[#FFFFFF] w-3/4 py-10">
-//           Join the community now! <span>
-
-//           <img src={arrow1} alt="Arrow"/>
-//           </span>
-
-//         </button>
-//         <button className="bg-[#CDCDE7] text-[#1C1CFF] w-3/4 py-10 flex justify-center items-center">
-//           Partner with ETHJos <span>
-
-//           <img src={arrow2} alt="Arrow"/>
-//           </span>
-//         </button>
-//       </div>
-//     </div>
-//       <p className="flex justify-center items-center pt-4 text-xl text-slate-600">Empowering Tomorow, Today</p>
-//     </>
-//   );
-// };
-
-// export default CallActions;
-
-
 import arrow1 from "../assets/Arrows (1).png";
 import arrow2 from "../assets/Arrows.png";
 

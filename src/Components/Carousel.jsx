@@ -1,85 +1,42 @@
-// import { useState, useEffect } from "react";
-// import item1 from "../assets/sitted.png";
-// import item2 from "../assets/standing.png";
-// import item3 from "../assets/sitted.png";
-// import item4 from "../assets/sitted.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import item1 from "../assets/Rectangle.png";
+import item2 from "../assets/vr.png";
+import item3 from "../assets/vr.png";
+import item4 from "../assets/Rectangle.png";
+import item5 from "../assets/vr.png";
 
-// const MyCarousel = () => {
-//   const images = [item1, item2, item3, item4, item1, item2]; 
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const ITEMS_PER_SLIDE = 4;
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prevIndex) =>
-//         prevIndex + ITEMS_PER_SLIDE >= images.length ? 0 : prevIndex + ITEMS_PER_SLIDE
-//       );
-//     }, 3000); 
-
-//     return () => clearInterval(interval); 
-//   }, [images.length]);
-
-  
-//   const visibleImages = images.slice(
-//     currentIndex,
-//     currentIndex + ITEMS_PER_SLIDE
-//   );
-
-//   return (
-//     <div className="mt-20 overflow-hidden">
-//       <div className="flex gap-4 transition-transform duration-1000 ease-in-out">
-//         {visibleImages.map((image, index) => (
-//           <img
-//             key={index}
-//             src={image}
-//             alt={`Slide ${index + 1}`}
-//             className="w-1/3 object-cover"
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default MyCarousel;
-
-
-import { useState, useEffect } from "react";
-import item1 from "../assets/sitted.png";
-import item2 from "../assets/standing.png";
-import item3 from "../assets/sitted.png";
-import item4 from "../assets/sitted.png";
+const images = [
+  { src: item1, alt: "Sitting Position 1", width: 265.35, Height: 100 },
+  { src: item2, alt: "Standing Position", width: 265.35, Height: 100 },
+  { src: item3, alt: "Sitting Position 2", width: 265.35, Height: 100 },
+  { src: item4, alt: "Sitting Position 3", width: 265.35, Height: 100 },
+  { src: item5, alt: "Sitting Position 4", width: 265.35, Height: 100 },
+];
 
 const MyCarousel = () => {
-  const images = [item1, item2, item3, item4, item1, item2]; 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  const ITEMS_PER_SLIDE = 4;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex + ITEMS_PER_SLIDE >= images.length ? 0 : prevIndex + ITEMS_PER_SLIDE
-      );
-    }, 3000);
-
-    return () => clearInterval(interval); 
-  }, [images.length]);
-
-  const visibleImages = images.slice(currentIndex, currentIndex + ITEMS_PER_SLIDE);
-
   return (
-    <div className="mt-20 overflow-hidden">
-      <div className="flex gap-4 transition-transform duration-1000 ease-in-out">
-        {visibleImages.map((image, index) => (
+    <div>
+      <h1 className="font-bold text-3xl flex justify-center items-center mt-10">We are Disruptors</h1>
+    <Carousel
+      autoPlay
+      infiniteLoop
+      interval={2000}
+      showThumbs={false}
+      showStatus={false}
+      className=" w-[100vw] rounded-3xl mt-10"
+    >
+      {images.map((image, index) => (
+        <div key={index}>
           <img
-            key={index}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 object-cover"
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.Height}
           />
-        ))}
-      </div>
+        </div>
+      ))}
+    </Carousel>
     </div>
   );
 };

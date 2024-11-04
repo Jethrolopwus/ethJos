@@ -1,3 +1,4 @@
+
 import { useForm } from "react-hook-form";
 import discord from "../assets/Discord.png";
 import twitter from "../assets/twitter.png";
@@ -16,7 +17,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="mt-20 flex flex-col md:flex-row justify-center gap-8 px-4">
+    <div className="relative mt-20 flex flex-col md:flex-row justify-center gap-8 px-4">
+      {/* Right Blur Effect */}
+      <div className="absolute -right-10 top-0 h-full w-40 bg-[#8282FF] opacity-30 blur-2xl"></div>
+
+      {/* Text Section */}
       <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md">
         <h1 className="text-3xl md:text-5xl font-bold">
           Join the <span className="text-[#1c1cff]">ETHJOS</span> community!
@@ -30,7 +35,7 @@ const Contact = () => {
       </div>
 
       {/* Form Section */}
-      <div className="w-full md:w-[507px] border rounded-2xl bg-gradient-to-tr from-[#CDCDE7] to-[#CDCDE7] p-6 md:p-8">
+      <div className="relative w-full md:w-[507px] border rounded-2xl bg-gradient-to-tr from-[#CDCDE7] to-[#CDCDE7] p-6 md:p-8">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div className="flex flex-col">
             <label htmlFor="fullName" className="text-sm font-medium mb-2">

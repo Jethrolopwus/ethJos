@@ -6,9 +6,12 @@ import github from "../assets/github.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center mt-20 px-4">
-      <div className="flex flex-col items-center text-center">
-        <img src={logo} alt="Logo" className="h-12 mb-4"/>
+    <div className="relative flex justify-center items-center mt-20 px-4">
+      <div className="absolute inset-0 flex justify-center">
+        <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#8282FF] opacity-30 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative flex flex-col items-center text-center z-10">
+        <img src={logo} alt="Logo" className="h-12 mb-4" />
         <ul className="flex flex-wrap gap-x-6 gap-y-2 items-center text-black text-sm md:text-base mt-4">
           <li className="cursor-pointer hover:text-blue-500">Home</li>
           <li className="cursor-pointer hover:text-blue-500">Events</li>
